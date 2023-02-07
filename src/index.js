@@ -1,1 +1,1 @@
-console.log('HOLA DESDE ESBUILD');
+require('./server');
