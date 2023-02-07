@@ -1,0 +1,33 @@
+{
+  "name": "sonic-games-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KotwGrone96/sonic-games-api.git"
+  },
+  "author": "Nelson Gamero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KotwGrone96/sonic-games-api/issues"
+  },
+  "homepage": "https://github.com/KotwGrone96/sonic-games-api#readme",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.18.2",
+    "moment": "2.29.4",
+    "mysql2": "3.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.17.6",
+    "eslint": "8.33.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "nodemon": "2.0.20"
+  }
+}
