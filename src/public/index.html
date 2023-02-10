@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -10,9 +10,216 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link
+      href="./output.css"
+      rel="stylesheet"
+    />
     <title>Sonic Games API</title>
   </head>
   <body>
-    <h1>Sonic Games API</h1>
+    <div class="z-50 relative p-4">
+      <div class="mx-auto flex justify-center items-center w-max px-2 flex-col gap-1 pb-5">
+        <h1
+          class="text-5xl uppercase text-yellow-500 font-extrabold"
+          style="
+            -webkit-text-stroke: 3px #0e4aa2;
+            text-shadow: 3px 3px 2px #f1f1f1, -2px -2px 2px #f1f1f1;
+          "
+        >
+          Sonic
+        </h1>
+        <span class="text-center uppercase text-3xl bg-red-600 px-2 py-1 rounded-xl font-bold"
+          >The Hedgehog
+        </span>
+        <span
+          class="text-center uppercase text-3xl text-blue-700 font-extrabold italic"
+          style="-webkit-text-stroke: 1px #f1f1f1"
+          >Games API</span
+        >
+      </div>
+      <p
+        class="text-center bg-black/50 py-2 px-4 rounded-lg md:text-lg font-medium tracking-widest max-w-7xl mx-auto"
+      >
+        Acá podrás encontrar toda la información relacionada a los juegos de nuestro erizo azul
+        favorito. <br />
+        Además de otras utilidades que te ayudarán a completar la información que necesites para el
+        desarrollo de tu App. <br />
+        Esta API es de uso libre y no requiere clave de acceso para el uso de la misma.
+      </p>
+      <main class="max-w-7xl text-start mx-auto py-5">
+        <h2
+          class="uppercase text-3xl text-yellow-500 font-extrabold"
+          style="
+            -webkit-text-stroke: 3px #0e4aa2;
+            text-shadow: 3px 3px 2px #f1f1f1, -2px -2px 2px #f1f1f1;
+          "
+        >
+          Endpoints
+        </h2>
+        <div class="py-2 md:py-4">
+          <h3 class="inline bg-red-600 px-2 py-1 rounded-lg uppercase font-bold">Juegos</h3>
+          <p
+            class="text-start bg-black/50 mt-2 py-2 px-4 rounded-lg md:text-lg font-medium tracking-widest max-w-7xl mx-auto"
+          >
+            Este endpoint brinda un un objeto JSON con toda la información relacionada a los juegos
+            de Sonic The Hedgehog, desde el más viejo hasta el más nuevo.
+          </p>
+          <div class="mt-2 bg-gray-900 p-2 rounded-xl max-w-max">
+            <p class="md:flex justify-start gap-6 items-center font-bold">
+              <a
+                href="https://nelsongamerodev.com/sonic-games-api/games/"
+                class="hover:text-red-600 transition-colors"
+                target="_blank"
+                >https://nelsongamerodev.com/sonic-games-api/games/</a
+              >
+              <button
+                data-endpoint="https://nelsongamerodev.com/sonic-games-api/games/"
+                class="uppercase bg-yellow-500 py-1 px-2 font-bold hover:bg-yellow-400 transition-colors rounded-xl"
+              >
+                Copiar
+              </button>
+            </p>
+          </div>
+          <p
+            class="text-start bg-black/50 mt-2 py-2 px-4 rounded-lg md:text-lg font-medium tracking-widest max-w-7xl mx-auto"
+          >
+            Cada juego tiene su propio ID único representado por un número y puede ser usado para
+            una consulta específica de ese juego. Simplemente debemos indicar dicho ID cómo una
+            ruta.
+          </p>
+
+          <div class="mt-2 bg-gray-900 p-2 rounded-xl max-w-max">
+            <p class="md:flex justify-start gap-6 items-center font-bold">
+              <a
+                href="https://nelsongamerodev.com/sonic-games-api/games/2"
+                class="hover:text-red-600 transition-colors"
+                target="_blank"
+                >https://nelsongamerodev.com/sonic-games-api/games/2</a
+              >
+              <button
+                data-endpoint="https://nelsongamerodev.com/sonic-games-api/games/2"
+                class="uppercase bg-yellow-500 py-1 px-2 font-bold hover:bg-yellow-400 transition-colors rounded-xl"
+              >
+                Copiar
+              </button>
+            </p>
+          </div>
+          <p
+            class="text-start bg-black/50 mt-2 py-2 px-4 rounded-lg md:text-lg font-medium tracking-widest max-w-7xl mx-auto"
+          >
+            Se puede realizar una consulta más específica pasando por query params los valores
+            "platform" y "genre". De esta forma la lista de juego final será filtrada en base a esos
+            parámetros. No es necesario indicar los 2 valores, puede ser simplemente uno u otro. En
+            caso de que algún valor tenga un espacio entre medio (ej: playstation 3) se debe
+            reemplazar por un guión (ej: playstation-3). La búsqueda de valores no debe ser exacta,
+            por lo que no es necesario completar las palabras de la plataforma o el género que se
+            requiera, basta con poner 3 letras para que el arreglo de juegos se filtre en base a las
+            concidencias encontradas.
+          </p>
+
+          <div class="mt-2 bg-gray-900 p-2 rounded-xl max-w-max">
+            <p class="md:flex justify-start gap-6 items-center font-bold">
+              <a
+                href="https://nelsongamerodev.com/sonic-games-api/games?platform=playstation-3&genre=aventura"
+                class="hover:text-red-600 transition-colors"
+                target="_blank"
+                >https://nelsongamerodev.com/sonic-games-api/games?platform=playstation-3&genre=aventura</a
+              >
+              <button
+                data-endpoint="https://nelsongamerodev.com/sonic-games-api/games?platform=playstation-3&genre=aventura"
+                class="uppercase bg-yellow-500 py-1 px-2 font-bold hover:bg-yellow-400 transition-colors rounded-xl"
+              >
+                Copiar
+              </button>
+            </p>
+          </div>
+          <div class="mt-2 bg-gray-900 p-2 rounded-xl max-w-max">
+            <p class="md:flex justify-start gap-6 items-center font-bold">
+              <a
+                href="https://nelsongamerodev.com/sonic-games-api/games?platform=play&genre=aven"
+                class="hover:text-red-600 transition-colors"
+                target="_blank"
+                >https://nelsongamerodev.com/sonic-games-api/games?platform=play&genre=aven</a
+              >
+              <button
+                data-endpoint="https://nelsongamerodev.com/sonic-games-api/games?platform=play&genre=aven"
+                class="uppercase bg-yellow-500 py-1 px-2 font-bold hover:bg-yellow-400 transition-colors rounded-xl"
+              >
+                Copiar
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="py-2 md:py-4">
+          <h3 class="inline bg-red-600 px-2 py-1 rounded-lg uppercase font-bold">Plataformas</h3>
+          <p
+            class="text-start bg-black/50 mt-2 py-2 px-4 rounded-lg md:text-lg font-medium tracking-widest max-w-7xl mx-auto"
+          >
+            Este endpoint brinda un un objeto JSON con todas las plataformas de los juegos
+          </p>
+          <div class="mt-2 bg-gray-900 p-2 rounded-xl max-w-max">
+            <p class="md:flex justify-start gap-6 items-center font-bold">
+              <a
+                href="https://nelsongamerodev.com/sonic-games-api/platforms/"
+                class="hover:text-red-600 transition-colors"
+                target="_blank"
+                >https://nelsongamerodev.com/sonic-games-api/platforms/</a
+              >
+              <button
+                data-endpoint="https://nelsongamerodev.com/sonic-games-api/platforms/"
+                class="uppercase bg-yellow-500 py-1 px-2 font-bold hover:bg-yellow-400 transition-colors rounded-xl"
+              >
+                Copiar
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="py-2 md:py-4">
+          <h3 class="inline bg-red-600 px-2 py-1 rounded-lg uppercase font-bold">Géneros</h3>
+          <p
+            class="text-start bg-black/50 mt-2 py-2 px-4 rounded-lg md:text-lg font-medium tracking-widest max-w-7xl mx-auto"
+          >
+            Este endpoint brinda un un objeto JSON con todos los géneros de los juegos
+          </p>
+          <div class="mt-2 bg-gray-900 p-2 rounded-xl max-w-max">
+            <p class="md:flex justify-start gap-6 items-center font-bold">
+              <a
+                href="https://nelsongamerodev.com/sonic-games-api/genres/"
+                class="hover:text-red-600 transition-colors"
+                target="_blank"
+                >https://nelsongamerodev.com/sonic-games-api/genres/</a
+              >
+              <button
+                class="uppercase bg-yellow-500 py-1 px-2 font-bold hover:bg-yellow-400 transition-colors rounded-xl"
+                data-endpoint="https://nelsongamerodev.com/sonic-games-api/genres/"
+              >
+                Copiar
+              </button>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="w-full bg-gray-900 p-4 relative z-50">
+      <h4 class="text-center italic">Copyright ©2023 By Nelson Gamero</h4>
+      <p class="text-center bg-red-600 font-semibold my-4 mx-auto max-w-max py-1 px-2 rounded-xl">
+        Repositorio del proyecto
+      </p>
+      <a
+        href="https://github.com/KotwGrone96/sonic-games-api"
+        target="_blank"
+        class="block mx-auto w-10"
+      >
+        <img
+          src="./github.svg"
+          alt="nelson gamero github"
+          class="w-10 hover:scale-90 transition-transform"
+          style="
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(101%)
+              contrast(103%);
+          "
+      /></a>
+    </footer>
+    <script src="./main.js"></script>
   </body>
 </html>

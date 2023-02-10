@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply overflow-x-hidden bg-slate-700 bg-sonic-bg bg-fixed min-h-screen bg-center text-gray-100 bg-cover bg-no-repeat;
+  @apply before:fixed before:w-full before:h-full before:bg-blue-900/70 before:z-10 before:backdrop-blur-[3px];
+}
